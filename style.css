@@ -1,42 +1,101 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
 body {
-  font-family: Arial;
-  margin: 0;
-  background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-header {
-  background: #2e7d32;
-  color: white;
-  text-align: center;
-  padding: 20px;
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
 }
 
+/* NAVBAR */
 nav {
-  background: #1b5e20;
-  text-align: center;
-  padding: 10px;
+    background: #2c3e50;
+    padding: 15px;
 }
 
-nav a {
-  color: white;
-  margin: 10px;
-  text-decoration: none;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
-.hero {
-  padding: 40px;
-  text-align: center;
+nav ul li {
+    margin: 0 15px;
 }
 
-.btn {
-  background: green;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.produk {
-  background: white;
-  margin: 20px;
-  padding: 20px;
+/* SECTION */
+.section {
+    padding: 40px 0;
 }
+
+/* GRID / ROW */
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+}
+
+/* IMAGE */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BUTTON */
+button {
+    padding: 10px 20px;
+    border: none;
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+
+/* ========================= */
+/* RESPONSIVE UNTUK HP */
+/* ========================= */
+
+@media screen and (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+}
+
